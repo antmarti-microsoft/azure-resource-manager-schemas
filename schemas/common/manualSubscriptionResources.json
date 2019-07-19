@@ -1,0 +1,41 @@
+{
+  "id": "https://schema.management.azure.com/schemas/common/manualSubscriptionResources.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "manualSubscriptionResources",
+  "description": "Resource templates which have been manually generated",
+  "type": "object",
+  "oneOf": [
+    {
+      "allOf": [
+        {
+          "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/resourceBase"
+        },
+        {
+          "oneOf": [
+            { "$ref": "https://schema.management.azure.com/schemas/2017-09-01/Microsoft.Authorization.json#/resourceDefinitions/roleAssignments" },
+            { "$ref": "https://schema.management.azure.com/schemas/2017-09-01/Microsoft.Authorization.json#/resourceDefinitions/roleDefinitions" },
+            { "$ref": "https://schema.management.azure.com/schemas/2018-03-01/Microsoft.Authorization.json#/resourceDefinitions/policyAssignments" },
+            { "$ref": "https://schema.management.azure.com/schemas/2018-03-01/Microsoft.Authorization.json#/resourceDefinitions/policyDefinitions" },
+            { "$ref": "https://schema.management.azure.com/schemas/2018-03-01/Microsoft.Authorization.json#/resourceDefinitions/policySetDefinitions" },
+            { "$ref": "https://schema.management.azure.com/schemas/2018-05-01/Microsoft.Authorization.json#/resourceDefinitions/policyAssignments" },
+            { "$ref": "https://schema.management.azure.com/schemas/2018-05-01/Microsoft.Authorization.json#/resourceDefinitions/policyDefinitions" },
+            { "$ref": "https://schema.management.azure.com/schemas/2018-05-01/Microsoft.Authorization.json#/resourceDefinitions/policySetDefinitions" }
+          ]
+        }
+      ]
+    },
+    {
+      "allOf": [
+        {
+          "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/ARMResourceBase"
+        },
+        {
+          "oneOf": [
+            { "$ref": "https://schema.management.azure.com/schemas/2018-05-01/Microsoft.Resources.json#/resourceDefinitions/resourceGroups" },
+            { "$ref": "https://schema.management.azure.com/schemas/2018-05-01/Microsoft.Resources.json#/resourceDefinitions/deployments" }
+          ]
+        }
+      ]
+    }
+  ]
+}

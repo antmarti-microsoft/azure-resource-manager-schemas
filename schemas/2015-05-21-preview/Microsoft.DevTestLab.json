@@ -61,7 +61,7 @@
             "isAuthenticationWithSshKey": {
               "oneOf": [
                 { "type": "boolean" },
-                { "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression" }    
+                { "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression" }    
               ],
               "description": "Sets whether SSH Key should be used to authenticate to Linux machine"
             }, 
