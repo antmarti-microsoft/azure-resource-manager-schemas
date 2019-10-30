@@ -26,6 +26,10 @@ async function generateSchemas(readme: string, whitelistConfig?: WhitelistConfig
         const apiVersion = path.basename(subPath);
         const tmpFolder = path.join(os.tmpdir(), Math.random().toString(36).substr(2));
 
+        if (apiVersion !== '2018-02-01' && apiVersion !== '2018-11-01') {
+            continue;
+        }
+
         try {
             const generatedSchemas = await generateSchema(readme, tmpFolder, apiVersion);
 
