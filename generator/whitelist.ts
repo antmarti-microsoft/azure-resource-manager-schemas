@@ -7,6 +7,21 @@ const whitelist: WhitelistConfig[] = [
         namespace: 'Microsoft.AlertsManagement',
     },
     {
+        basePath: 'applicationinsights/resource-manager',
+        namespace: 'Microsoft.Insights',
+        suffix: 'AppInsights',
+        resourceConfig: [
+            {
+                type: 'workbooks',
+                scopes: ScopeType.ResourceGroup,
+            },
+            {
+                type: 'workbooktemplates',
+                scopes: ScopeType.ResourceGroup,
+            },
+        ],
+    },
+    {
         basePath: 'appplatform/resource-manager',
         namespace: 'Microsoft.AppPlatform',
     },
@@ -178,6 +193,20 @@ const whitelist: WhitelistConfig[] = [
     {
         basePath: 'mariadb/resource-manager',
         namespace: 'Microsoft.DBforMariaDB',
+    },
+    {
+        basePath: 'monitor/resource-manager',
+        namespace: 'Microsoft.Insights',
+        resourceConfig: [
+            {
+                type: 'diagnosticSettings',
+                scopes: ScopeType.Extension,
+            },
+            {
+                type: 'guestDiagnosticSettingsAssociation',
+                scopes: ScopeType.Extension,
+            },
+        ],
     },
     {
         basePath: 'mysql/resource-manager',
