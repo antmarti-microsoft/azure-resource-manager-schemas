@@ -54,6 +54,10 @@ export async function generateSchemas(readme: string, whitelistConfig?: Whitelis
 
     const schemaConfigs: SchemaConfiguration[] = [];
     for (const apiVersion of apiVersions) {
+        if (apiVersion != "2019-05-05-preview") {
+            continue;
+        }
+
         const tmpFolder = path.join(os.tmpdir(), Math.random().toString(36).substr(2));
 
         try {
